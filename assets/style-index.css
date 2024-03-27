@@ -33,12 +33,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 17rem;
+  width: 18rem;
   background-color: #fbf7e3;
   border-radius: 18%;
   justify-content: space-between;
-  height: 21rem;
+  height: 22rem;
   overflow: hidden;
+}
+#logo {
+  width: 30px;
 }
 
 button {
@@ -71,24 +74,33 @@ img {
 
 .navbar button:nth-of-type(3) {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  order: -1;
+  flex-basis: content;
+  padding-inline: 3rem;
+  border-radius: 35px;
+  flex-grow: 1;
 }
 
 .navbar {
-  width: 50rem;
+  /* width: 50rem; */
+  width: 100%;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   background-color: #fbf7e3;
   border-radius: 50px;
   padding: 1rem;
+  gap: 1rem;
 }
 .navbar button {
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   width: 9rem;
   color: inherit;
+  flex-grow: 0;
 }
 article {
-  min-width: 320px;
+  min-width: 250px;
   width: 100%;
   display: flex;
   padding: 1rem;
