@@ -41,7 +41,7 @@ body {
   overflow: hidden;
 }
 #logo {
-  width: 30px;
+  width: 40px;
 }
 
 button {
@@ -67,6 +67,7 @@ button {
 }
 img {
   width: -webkit-fill-available;
+  max-width: 450px;
 }
 .flex-row {
   display: flex;
@@ -76,17 +77,19 @@ img {
   display: flex;
   justify-content: center;
   order: -1;
-  flex-basis: content;
-  padding-inline: 3rem;
   border-radius: 35px;
-  flex-grow: 1;
+  width: 100%;
+  padding-block: 1.5rem;
+}
+.navbar button:nth-of-type(3) p {
+  font-size: 1.4rem;
 }
 
 .navbar {
   /* width: 50rem; */
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #fbf7e3;
   border-radius: 50px;
@@ -95,9 +98,9 @@ img {
 }
 .navbar button {
   padding: 0.7rem 1rem;
-  width: 9rem;
+  width: 32%;
+  min-width: 118px;
   color: inherit;
-  flex-grow: 0;
 }
 article {
   min-width: 250px;
@@ -107,14 +110,36 @@ article {
   background-color: #fbf7e3;
   border-radius: 20px;
   flex-direction: column-reverse;
+  align-items: center;
 }
 
 article div {
   font-size: 0.9rem;
-  padding-left: 1rem;
+  padding-inline: 1rem;
+  max-width: 450px;
+}
+@media screen and (min-width: 576px) {
+  .navbar {
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+  }
+  .navbar button:nth-last-of-type(3) {
+    order: 0;
+    width: 50%;
+  }
+  .navbar button {
+    min-width: 90px;
+    padding: 0.7rem 0;
+  }
+  .card {
+    width: 16rem;
+  }
 }
 
 @media screen and (min-width: 769px) {
+  .text-center {
+    text-align: start;
+  }
   article {
     width: 750px;
     flex-direction: row;
@@ -124,6 +149,12 @@ article div {
   }
   img {
     width: 50%;
+  }
+  .card {
+    width: 14rem;
+  }
+  .card:last-of-type {
+    display: none;
   }
 }
 
