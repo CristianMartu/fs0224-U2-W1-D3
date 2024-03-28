@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/style-index.css" />
   </head>
   <body>
-    <header class="margin-bottom">
+    <header>
       <div class="navbar flex-center">
         <button>Our Honey</button>
         <button>Trace honey</button>
@@ -23,6 +23,17 @@
     <main>
       <h1 class="text-center margin-bottom">Best Selling Products</h1>
       <div class="conteiner margin-bottom">
+        <div class="card">
+          <div class="image"></div>
+          <div class="flex-center">
+            <div class="text-center">
+              <h2>100% Bio Honey</h2>
+              <p>Italian, not treated</p>
+            </div>
+            <p class="margin-block bold">7$/kg</p>
+          </div>
+          <button class="margin-bottom">Add to cart</button>
+        </div>
         <div class="card">
           <div class="image"></div>
           <div class="flex-center">
@@ -90,5 +101,13 @@
         </div>
       </article>
     </main>
+    <script>
+      const allButton = document.querySelectorAll('button')
+      allButton.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          window.open('honey-index.html', '_blank')
+        })
+      })
+    </script>
   </body>
 </html>
